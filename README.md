@@ -3,12 +3,26 @@ Flexbox Grid
 
 [flexboxgrid.com](http://flexboxgrid.com)
 
-Grid based on the `flex` display property.
+Grid based on the `flex` display property. Based on rem.
+### Values
+- `.container` padding: .5rem,
+- `.container` width: $breakpoint - 1rem,
+- `.col-*` padding: .5rem.
+
+### Breakpoints
+- `xs`: 0−36rem
+- `sm`: 36−48rem
+- `md`: 48−62rem
+- `lg`: 62−75rem
+- `xl`: 75rem+
 
 Install
 ---------
+### yarn
+`yarn add flexboxgrid2`
+
 ### npm
-`npm i flexboxgrid --save`
+`npm i -S flexboxgrid2`
 
 <!-- ### cdn
 <code>CDNJS</code>
