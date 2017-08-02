@@ -1,6 +1,6 @@
 Package.describe({
   name: "evgenyrodionov:flexboxgrid2",
-  version: "7.0.0-alpha1",
+  version: "7.0.0-alpha4",
   summary: "Grid based off of CSS3 flexbox specification",
   git: "https://github.com/evgenyrodionov/flexboxgrid2",
   documentation: "README.md"
