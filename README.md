@@ -1,6 +1,7 @@
-# Flexbox Grid
+# flexboxgrid2
+[![npm version](https://badge.fury.io/js/flexboxgrid2.svg)](https://badge.fury.io/js/flexboxgrid2)
 
-Grid based on the `flex` display property. Based on rem.
+Grid based on the `flex` display property and rem.
 
 ### Values
 - `.container` padding: .5rem,
