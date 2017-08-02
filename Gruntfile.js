@@ -12,16 +12,16 @@ module.exports = function(grunt) {
       },
       release: {
         files: {
-          "dist/flexboxgrid.css": "src/css/flexboxgrid.css"
+          "dist/flexboxgrid.css": "src/flexboxgrid.css"
         }
       }
     },
     cssmin: {
       concat: {
         files: {
-          "site-style.css": [
+          "docs/style.css": [
             "node_modules/normalize.css/normalize.css",
-            "src/css/site-style.css",
+            "docs/src/style.css",
             "dist/flexboxgrid.css"
           ]
         }
@@ -41,20 +41,13 @@ module.exports = function(grunt) {
         ext: ".min.css"
       }
     },
-    uglify: {
-      release: {
-        files: {
-          "js/index.js": "src/js/index.js"
-        }
-      }
-    },
     processhtml: {
       dist: {
         options: {
           process: true
         },
         files: {
-          "index.html": ["src/index.html"]
+          "docs/index.html": ["docs/src/index.html"]
         }
       }
     },
@@ -65,7 +58,7 @@ module.exports = function(grunt) {
           collapseWhitespace: true
         },
         files: {
-          "index.html": ["index.html"]
+          "docs/index.html": ["docs/index.html"]
         }
       }
     },
@@ -86,7 +79,6 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks("grunt-myth");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
-  grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-processhtml");
   grunt.loadNpmTasks("grunt-contrib-htmlmin");
@@ -97,7 +89,6 @@ module.exports = function(grunt) {
     "cssmin:concat",
     "cssmin:minify",
     "cssmin:release",
-    "uglify",
     "processhtml",
     "htmlmin"
   ]);
