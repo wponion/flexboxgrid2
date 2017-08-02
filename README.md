@@ -22,7 +22,7 @@ Grid based on the `flex` display property and rem.
 ### npm
 `npm i -S flexboxgrid2`
 
-### unpkg.com
+### unpkg.com CDN
 ```html
 <link rel="stylesheet" href="//unpkg.com/flexboxgrid2" >
 ``` 
