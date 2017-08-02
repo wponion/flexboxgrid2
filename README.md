@@ -1,9 +1,7 @@
-Flexbox Grid
-===========
-
-[flexboxgrid.com](http://flexboxgrid.com)
+# Flexbox Grid
 
 Grid based on the `flex` display property. Based on rem.
+
 ### Values
 - `.container` padding: .5rem,
 - `.container` width: $breakpoint - 1rem,
@@ -16,19 +14,17 @@ Grid based on the `flex` display property. Based on rem.
 - `lg`: 62−75rem
 - `xl`: 75rem+
 
-Install
----------
+# Install
 ### yarn
 `yarn add flexboxgrid2`
 
 ### npm
 `npm i -S flexboxgrid2`
 
-<!-- ### cdn
-<code>CDNJS</code>
+ ### unpkg.com
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
-``` -->
+<link rel="stylesheet" href="//unpkg.com/flexboxgrid2" >
+``` 
 
 ### css
 * [Development](https://raw.githubusercontent.com/evgenyrodionov/flexboxgrid2/master/dist/flexboxgrid.css)
