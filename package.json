@@ -1,9 +1,9 @@
 {
   "name": "flexboxgrid2",
-  "version": "7.0.0-alpha6",
+  "version": "7.0.0-alpha7",
   "description": "Grid based off of CSS3 flexbox specification",
-  "style": "dist/flexboxgrid.css",
-  "main": "dist/flexboxgrid.css",
+  "style": "flexboxgrid2.css",
+  "main": "flexboxgrid2.css",
   "scripts": {
     "build": "grunt",
     "prepublish": "npm run build"
@@ -12,21 +12,13 @@
     "type": "git",
     "url": "git://github.com/evgenyrodionov/flexboxgrid2.git"
   },
-  "keywords": [
-    "browser",
-    "flexbox",
-    "grid",
-    "css"
-  ],
+  "keywords": ["browser", "flexbox", "grid", "css"],
   "author": "@evgenyrodionov",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/evgenyrodionov/flexboxgrid2/issues"
   },
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["flexboxgrid2.css", "flexboxgrid2.min.css", "src"],
   "homepage": "https://github.com/evgenyrodionov/flexboxgrid2",
   "devDependencies": {
     "grunt": "^0.4.5",

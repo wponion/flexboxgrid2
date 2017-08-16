@@ -12,7 +12,8 @@ module.exports = function(grunt) {
       },
       release: {
         files: {
-          "dist/flexboxgrid.css": "src/flexboxgrid.css"
+          "flexboxgrid2.css": "src/flexboxgrid2.css",
+          "dist/flexboxgrid2.css": "src/flexboxgrid2.css"
         }
       }
     },
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
           "docs/style.css": [
             "node_modules/normalize.css/normalize.css",
             "docs/src/style.css",
-            "dist/flexboxgrid.css"
+            "flexboxgrid2.css"
           ]
         }
       },
@@ -35,9 +36,7 @@ module.exports = function(grunt) {
       },
       release: {
         expand: true,
-        cwd: "dist",
-        src: ["*.css", "!*.min.css"],
-        dest: "dist",
+        src: ["flexboxgrid2.css", "dist/flexboxgrid2.css"],
         ext: ".min.css"
       }
     },
