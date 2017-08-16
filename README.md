@@ -10,9 +10,9 @@ Grid based on the `flex` display property.
 
 ### Breakpoints
 - `xs`: 0..575px
-- `sm`: 576px..767px
-- `md`: 768px..991px
-- `lg`: 992px..1199px
+- `sm`: 576..767px
+- `md`: 768..991px
+- `lg`: 992..1199px
 - `xl`: 1200px+
 
 # Install
