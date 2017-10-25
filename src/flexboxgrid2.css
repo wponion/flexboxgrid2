@@ -1,6 +1,6 @@
 :root {
-  --gutter-width: 1rem;
-  --outer-margin: 2rem;
+  --gutter-width: 16px;
+  --outer-margin: 32px;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 0rem;
@@ -25,51 +25,39 @@
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-right: .5rem;
-  padding-left: .5rem;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .container-fluid {
-  padding-right: var(--gutter-width, 1rem);
-  padding-left: var(--gutter-width, 1rem);
+  padding-right: var(--gutter-width, 16px);
+  padding-left: var(--gutter-width, 16px);
 }
 
 @media (--sm-viewport) {
   .container {
-    padding-right: .5rem;
-    padding-left: .5rem;
-
-    width: var(--sm-min);
+    width: calc(var(--sm-min) - var(--gutter-width));
     max-width: 100%;
   }
 }
 
 @media (--md-viewport) {
   .container {
-    padding-right: .5rem;
-    padding-left: .5rem;
-
-    width: var(--md-min);
+    width: calc(var(--md-min) - var(--gutter-width));
     max-width: 100%;
   }
 }
 
 @media (--lg-viewport) {
   .container {
-    padding-right: .5rem;
-    padding-left: .5rem;
-
-    width: var(--lg-min);
+    width: calc(var(--lg-min) - var(--gutter-width));
     max-width: 100%;
   }
 }
 
 @media (--xl-viewport) {
   .container {
-    padding-right: .5rem;
-    padding-left: .5rem;
-
-    width: var(--xl-min);
+    width: calc(var(--xl-min) - var(--gutter-width));
     max-width: 100%;
   }
 }
@@ -80,8 +68,8 @@
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: var(--gutter-compensation, -0.5rem);
-  margin-left: var(--gutter-compensation, -0.5rem);
+  margin-right: var(--gutter-compensation, -08px);
+  margin-left: var(--gutter-compensation, -08px);
 }
 
 .row.reverse {
@@ -120,8 +108,8 @@
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: var(--half-gutter-width, 0.5rem);
-  padding-left: var(--half-gutter-width, 0.5rem);
+  padding-right: var(--half-gutter-width, 08px);
+  padding-left: var(--half-gutter-width, 08px);
 }
 
 .col-xs {
@@ -314,8 +302,8 @@
   .col-sm-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--half-gutter-width, 08px);
+    padding-left: var(--half-gutter-width, 08px);
   }
 
   .col-sm {
@@ -509,8 +497,8 @@
   .col-md-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--half-gutter-width, 08px);
+    padding-left: var(--half-gutter-width, 08px);
   }
 
   .col-md {
@@ -704,8 +692,8 @@
   .col-lg-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--half-gutter-width, 08px);
+    padding-left: var(--half-gutter-width, 08px);
   }
 
   .col-lg {
@@ -899,8 +887,8 @@
   .col-xl-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: var(--half-gutter-width, 08px);
+    padding-left: var(--half-gutter-width, 08px);
   }
 
   .col-xl {
