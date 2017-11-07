@@ -26,7 +26,7 @@ Grid based on the `flex` display property.
 ### webpack
 ```js
 import 'flexboxgrid2'
-// or
+// or if it don't work
 import 'flexboxgrid2/flexboxgrid2.css'
 ```
 
