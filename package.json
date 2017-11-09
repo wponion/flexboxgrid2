@@ -1,6 +1,6 @@
 {
   "name": "flexboxgrid2",
-  "version": "7.0.0-alpha11",
+  "version": "7.0.0-alpha12",
   "description": "Grid based off of CSS3 flexbox specification",
   "style": "flexboxgrid2.css",
   "main": "flexboxgrid2.css",
