@@ -1,21 +1,22 @@
 # flexboxgrid2
 [![npm version](https://badge.fury.io/js/flexboxgrid2.svg)](https://badge.fury.io/js/flexboxgrid2)
 
-Grid based on the `flex` display property.
+Modern 12 column grid system based on flex property.
 
-### Values
-- `.container` padding: .5rem,
-- `.container` width: $breakpoint - 1rem,
-- `.col-*` padding: .5rem.
+## Motivation
+Forked from [kristoferjoseph/flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) because original project seems abandoned ([kristoferjoseph/flexboxgrid#236](https://github.com/kristoferjoseph/flexboxgrid/pull/236), [kristoferjoseph/flexboxgrid#229](https://github.com/kristoferjoseph/flexboxgrid/pull/229), [kristoferjoseph/flexboxgrid#211](https://github.com/kristoferjoseph/flexboxgrid/pull/211), etc).
 
-### Breakpoints
+## Breakpoints
 - `xs`: 0..575px
 - `sm`: 576..767px
 - `md`: 768..991px
 - `lg`: 992..1199px
 - `xl`: 1200px+
+- `.container` padding: 8px
+- `.container` width: $breakpoint - 16px
+- `.col-*` padding: 8px
 
-# Install
+## Install
 ### yarn
 `yarn add flexboxgrid2`
 
@@ -26,7 +27,7 @@ Grid based on the `flex` display property.
 ### webpack
 ```js
 import 'flexboxgrid2'
-// or if it don't work
+// or if you use airbnb-config-eslint which explicitly wants .css extension
 import 'flexboxgrid2/flexboxgrid2.css'
 ```
 
@@ -34,6 +35,3 @@ import 'flexboxgrid2/flexboxgrid2.css'
 ```html
 <link rel="stylesheet" href="//unpkg.com/flexboxgrid2" >
 ``` 
-
-# Inspiration
-- based on [flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid), but looks like project was abandoned
