@@ -3,6 +3,8 @@
 
 Modern 12 column grid system based on flex property.
 
+→ [Documentation](https://evgenyrodionov.github.io/flexboxgrid2/)
+
 ## Motivation
 Forked from [kristoferjoseph/flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) because original project seems abandoned ([kristoferjoseph/flexboxgrid#236](https://github.com/kristoferjoseph/flexboxgrid/pull/236), [kristoferjoseph/flexboxgrid#229](https://github.com/kristoferjoseph/flexboxgrid/pull/229), [kristoferjoseph/flexboxgrid#211](https://github.com/kristoferjoseph/flexboxgrid/pull/211), etc).
 
