@@ -83,8 +83,10 @@
 [class^="col-"] {
   box-sizing: border-box;
   flex: 0 0 auto;
+  flex-basis: 100%;
   padding-right: var(--half-gutter-width, 8px);
   padding-left: var(--half-gutter-width, 8px);
+  max-width: 100%;
 }
 
 .col-xs {
