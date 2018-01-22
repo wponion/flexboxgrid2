@@ -35,5 +35,7 @@ import 'flexboxgrid2/flexboxgrid2.css'
 
 ### unpkg.com CDN
 ```html
-<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2">
+<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@[version]/flexboxgrid2.css">
 ``` 
+
+Replace `[version]` with current version, f.e. `7.1.0`
