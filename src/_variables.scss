@@ -1,0 +1,20 @@
+$gutter-width:        16px !default;
+$outer-margin:        32px !default;
+$gutter-compensation: calc((#{$gutter-width} * 0.5) * -1) !default;
+$half-gutter-width:   calc((#{$gutter-width} * 0.5)) !default;
+$xs-min:              0rem !default;
+$sm-min:              576px !default;
+$md-min:              768px !default;
+$lg-min:              992px !default;
+$xl-min:              1200px !default;
+$breakpoints:         (
+                              'sm-viewport': (min-width: 576px),
+                              'md-viewport': (min-width: 768px),
+                              'lg-viewport': (min-width: 992px),
+                              'xl-viewport': (min-width: 1200px),
+                              'xs-only': (max-width: 575px),
+                              'sm-only': "(min-width: 576px) and (max-width: 767px)",
+                              'md-only': "(min-width: 768px) and (max-width: 991px)",
+                              'lg-only': "(min-width: 992px) and (max-width: 1199px)",
+                              'xl-only': (min-width: 1200px),
+                      ) !default;

@@ -1,12 +1,12 @@
-# flexboxgrid2
+# FlexBoxGrid-2
 [![npm version](https://badge.fury.io/js/flexboxgrid2.svg)](https://badge.fury.io/js/flexboxgrid2)
 
 Modern 12 column grid system based on flex property.
 
-→ [Documentation](https://evgenyrodionov.github.io/flexboxgrid2/)
+→ [Documentation](https://flexboxgrid2.wponion.com/)
 
 ## Motivation
-Forked from [kristoferjoseph/flexboxgrid](https://github.com/kristoferjoseph/flexboxgrid) because original project seems abandoned ([kristoferjoseph/flexboxgrid#236](https://github.com/kristoferjoseph/flexboxgrid/pull/236), [kristoferjoseph/flexboxgrid#229](https://github.com/kristoferjoseph/flexboxgrid/pull/229), [kristoferjoseph/flexboxgrid#211](https://github.com/kristoferjoseph/flexboxgrid/pull/211), etc).
+Forked from [evgenyrodionov/flexboxgrid2](https://github.com/evgenyrodionov/flexboxgrid2) because original project seems to be abandoned for me. also i required a bit more change to the core. so i forked it.
 
 ## Breakpoints
 - `xs`: 0..575px
@@ -14,28 +14,34 @@ Forked from [kristoferjoseph/flexboxgrid](https://github.com/kristoferjoseph/fle
 - `md`: 768..991px
 - `lg`: 992..1199px
 - `xl`: 1200px+
-- `.container` padding: 8px
-- `.container` width: $breakpoint - 16px
-- `.col-*` padding: 8px
+- `.wpo-container` padding: 8px
+- `.wpo-container` width: $breakpoint - 16px
+- `.wpo-col-*` padding: 8px
 
-## Install
-### yarn
-`yarn add flexboxgrid2`
 
-### npm
-`npm i -S flexboxgrid2`
+## Examples
+[Demo](http://flexboxgrid2.wponion.com)
 
-# Usage
-### webpack
-```js
-import 'flexboxgrid2'
-// or if you use airbnb-config-eslint which explicitly wants .css extension
-import 'flexboxgrid2/flexboxgrid2.css'
+## Installation
+
+### with npm
+
+```
+npm install --save @wponion/flexboxgrid2
 ```
 
-### unpkg.com CDN
-```html
-<link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@[version]/flexboxgrid2.css">
-``` 
+---
 
-Replace `[version]` with current version, f.e. `7.2.1`
+## License
+This project is licensed under **MIT**. See the [LICENSE](LICENSE) file for more info.
+
+## Backed By
+| [![DigitalOcean][do-image]][do-ref] | [![JetBrains][jb-image]][jb-ref] |  [![Tidio Chat][tidio-image]][tidio-ref] |
+| --- | --- | --- |
+
+[do-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/DO_Logo_Horizontal_Blue-small.png
+[jb-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/phpstorm-small.png?v3
+[tidio-image]: https://vsp.ams3.cdn.digitaloceanspaces.com/cdn/tidiochat-small.png
+[do-ref]: https://s.svarun.in/Ef
+[jb-ref]: https://www.jetbrains.com
+[tidio-ref]: https://tidiochat.com
