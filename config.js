@@ -15,6 +15,15 @@ $files[ 'src/flexboxgrid2.scss' ] = {
 	],
 };
 
+$files[ 'dist/flexboxgrid2.css' ] = {
+	dist: 'docs/',
+	minify: true,
+	rename: 'dist-flexboxgrid2.css',
+	watch: [
+		'dist/flexboxgrid2.css'
+	],
+};
+
 module.exports = {
 	files: $files,
 	config: {}
