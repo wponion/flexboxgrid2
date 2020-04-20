@@ -1,101 +1,17 @@
-[class*="wpo-col-xs-"],
-[class*="wpo-col-sm-"],
-[class*="wpo-col-md-"],
-[class*="wpo-col-lg-"],
-[class*="wpo-col-xs-"],
-.wpo-col-xs,
-.wpo-col-sm,
-.wpo-col-md,
-.wpo-col-lg,
-.wpo-col-xl {
+[class*="wpo-col-"] {
   flex-grow:  1;
   flex-basis: 0;
   max-width:  100%;
 }
 
-.wpo-col-xs {
-  @include column_css();
-  @include offset_css();
+[class*="wpo-col-xl-"], [class*="wpo-col-lg-"], [class*="wpo-col-md-"] {
+  flex:          0 0 auto;
+  padding-right: $half-gutter-width;
+  padding-left:  $half-gutter-width;
 }
 
-@include alignment_css('xs');
-
-@include respond-to('md-viewport') {
-  [class*="wpo-col-md-"] {
-    box-sizing:    border-box;
-    flex:          0 0 auto;
-    padding-right: $half-gutter-width;
-    padding-left:  $half-gutter-width;
-  }
-  .wpo-col-md {
-    @include column_css();
-    @include offset_css();
-  }
-  @include alignment_css('md');
-}
-
-@include respond-to('lg-viewport') {
-  [class*="wpo-col-lg-"] {
-    box-sizing:    border-box;
-    flex:          0 0 auto;
-    padding-right: $half-gutter-width;
-    padding-left:  $half-gutter-width;
-  }
-  .wpo-col-lg {
-    @include column_css();
-    @include offset_css();
-  }
-  @include alignment_css('lg');
-}
-
-@include respond-to('xl-viewport') {
-  [class*="wpo-col-xl-"] {
-    box-sizing:    border-box;
-    flex:          0 0 auto;
-    padding-right: $half-gutter-width;
-    padding-left:  $half-gutter-width;
-  }
-  .wpo-col-xl {
-    @include column_css();
-    @include offset_css();
-  }
-  @include alignment_css('xl');
-}
-
-@include respond-to('sm-viewport') {
-  .wpo-col-sm {
-    @include column_css();
-    @include offset_css();
-  }
-  @include alignment_css('sm');
-}
-
-@include respond-to('xs-only') {
-  .wpo-hidden-xs {
-    display: none;
-  }
-}
-
-@include respond-to('sm-only') {
-  .wpo-hidden-sm {
-    display: none;
-  }
-}
-
-@include respond-to('md-only') {
-  .wpo-hidden-md {
-    display: none;
-  }
-}
-
-@include respond-to('lg-only') {
-  .wpo-hidden-lg {
-    display: none;
-  }
-}
-
-@include respond-to('xl-only') {
-  .wpo-hidden-xl {
-    display: none;
-  }
-}
+@import "responsive/xs";
+@import "responsive/sm";
+@import "responsive/md";
+@import "responsive/lg";
+@import "responsive/xl";

@@ -1,6 +1,4 @@
-
 .wpo-row {
-  box-sizing:     border-box;
   display:        flex;
   flex:           0 1 auto;
   flex-direction: row;
@@ -10,5 +8,15 @@
 
   &.wpo-reverse {
     flex-direction: row-reverse;
+  }
+
+  > .wpo-no-gutters {
+    margin-right: 0;
+    margin-left:  0;
+
+    > .wpo-col, > [class*="wpo-col-"] {
+      padding-right: 0;
+      padding-left:  0;
+    }
   }
 }

@@ -1,0 +1,16 @@
+@include wpo_respond_to('xl-viewport') {
+  .wpo-col-xl {
+    @include wpo_column_css();
+    @include wpo_offset_css();
+  }
+
+  @include wpo_alignment_css('xl');
+
+  @include wpo_float_css('xl');
+
+  @include wpo_visibility_css('xl');
+}
+
+@include wpo_respond_to('xl-only') {
+  @include wpo_hidden('xl');
+}

@@ -1,4 +1,4 @@
-@mixin column_css() {
+@mixin wpo_column_css() {
   &-1 {
     flex-basis: 8.33333333%;
     max-width:  8.33333333%;
@@ -49,46 +49,59 @@
   }
 }
 
-@mixin offset_css() {
-  &-offset-0 {
-    margin-left: 0;
-  }
-  &-offset-1 {
-    margin-left: 8.33333333%;
-  }
-  &-offset-2 {
-    margin-left: 16.66666667%;
-  }
-  &-offset-3 {
-    margin-left: 25%;
-  }
-  &-offset-4 {
-    margin-left: 33.33333333%;
-  }
-  &-offset-5 {
-    margin-left: 41.66666667%;
-  }
-  &-offset-6 {
-    margin-left: 50%;
-  }
-  &-offset-7 {
-    margin-left: 58.33333333%;
-  }
-  &-offset-8 {
-    margin-left: 66.66666667%;
-  }
-  &-offset-9 {
-    margin-left: 75%;
-  }
-  &-offset-10 {
-    margin-left: 83.33333333%;
-  }
-  &-offset-11 {
-    margin-left: 91.66666667%;
+@mixin wpo_offset_css() {
+  &-offset {
+    &-0 {
+      margin-left: 0;
+    }
+
+    &-1 {
+      margin-left: 8.33333333%;
+    }
+
+    &-2 {
+      margin-left: 16.66666667%;
+    }
+
+    &-3 {
+      margin-left: 25%;
+    }
+
+    &-4 {
+      margin-left: 33.33333333%;
+    }
+
+    &-5 {
+      margin-left: 41.66666667%;
+    }
+
+    &-6 {
+      margin-left: 50%;
+    }
+
+    &-7 {
+      margin-left: 58.33333333%;
+    }
+
+    &-8 {
+      margin-left: 66.66666667%;
+    }
+
+    &-9 {
+      margin-left: 75%;
+    }
+
+    &-10 {
+      margin-left: 83.33333333%;
+    }
+
+    &-11 {
+      margin-left: 91.66666667%;
+    }
   }
 }
 
-@mixin alignment_css($point) {
+@mixin wpo_alignment_css($point) {
   .wpo-start-#{$point} {
     justify-content: flex-start;
     text-align:      start;
@@ -137,8 +150,35 @@
   }
 }
 
+@mixin wpo_float_css($point) {
+  .wpo-float {
+    &-#{$point}-right {
+      float: right;
+    }
 
-@mixin respond-to($break_points...) {
+    &-#{$point}-left {
+      float: left;
+    }
+
+    &-#{$point}-none {
+      float: none;
+    }
+  }
+}
+
+@mixin wpo_visibility_css($point) {
+  .wpo {
+    &-#{$point}-visible {
+      visibility: visible;
+    }
+
+    &-#{$point}-invisible {
+      visibility: hidden;
+    }
+  }
+}
+
+@mixin wpo_respond_to($break_points...) {
   @each $breakpoint in $break_points {
     @if map-has-key($breakpoints, $breakpoint) {
       @media #{inspect(map-get($breakpoints, $breakpoint))} {
@@ -147,5 +187,11 @@
     } @else {
       @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`.Available breakpoints are: #{map-keys($breakpoints)}.";
     }
+  }
+}
+
+@mixin wpo_hidden($type) {
+  .wpo-hidden-#{$type} {
+    display: none;
   }
 }

@@ -1,0 +1,16 @@
+@include wpo_respond_to('sm-viewport') {
+  .wpo-col-sm {
+    @include wpo_column_css();
+    @include wpo_offset_css();
+  }
+
+  @include wpo_alignment_css('sm');
+
+  @include wpo_float_css('sm');
+
+  @include wpo_visibility_css('sm');
+}
+
+@include wpo_respond_to('sm-only') {
+  @include wpo_hidden('sm');
+}

@@ -1,0 +1,33 @@
+.wpo {
+  &-no {
+    &-padding {
+      padding: 0;
+    }
+
+    &-margin {
+      margin: 0;
+    }
+  }
+
+  &-visible {
+    visibility: visible;
+  }
+
+  &-invisible {
+    visibility: hidden;
+  }
+
+  &-float {
+    &-right {
+      float: right;
+    }
+
+    &-left {
+      float: left;
+    }
+
+    &-right {
+      float: none;
+    }
+  }
+}

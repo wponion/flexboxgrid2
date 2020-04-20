@@ -1,0 +1,14 @@
+.wpo-col-xs {
+  @include wpo_column_css();
+  @include wpo_offset_css();
+}
+
+@include wpo_alignment_css('xs');
+
+@include wpo_float_css('xs');
+
+@include wpo_visibility_css('xs');
+
+@include wpo_respond_to('xs-viewport') {
+  @include wpo_hidden('xs');
+}
