@@ -1,3 +1,5 @@
+@import 'mixins/breakpoints';
+
 @mixin wpo_column_css() {
   &-1 {
     flex-basis: 8.33333333%;
@@ -102,65 +104,65 @@
 }
 
 @mixin wpo_alignment_css($point) {
-  .wpo-start-#{$point} {
+  .wpo-start#{$point} {
     justify-content: flex-start;
     text-align:      start;
   }
 
-  .wpo-center-#{$point} {
+  .wpo-center#{$point} {
     justify-content: center;
     text-align:      center;
   }
 
-  .wpo-end-#{$point} {
+  .wpo-end#{$point} {
     justify-content: flex-end;
     text-align:      end;
   }
 
-  .wpo-top-#{$point} {
+  .wpo-top#{$point} {
     align-items: flex-start;
   }
 
-  .wpo-middle-#{$point} {
+  .wpo-middle#{$point} {
     align-items: center;
   }
 
-  .wpo-bottom-#{$point} {
+  .wpo-bottom#{$point} {
     align-items: flex-end;
   }
 
-  .wpo-around-#{$point} {
+  .wpo-around#{$point} {
     justify-content: space-around;
   }
 
-  .wpo-between-#{$point} {
+  .wpo-between#{$point} {
     justify-content: space-between;
   }
 
-  .wpo-first-#{$point} {
+  .wpo-first#{$point} {
     order: -1;
   }
 
-  .wpo-last-#{$point} {
+  .wpo-last#{$point} {
     order: 1;
   }
 
-  .wpo-initial-order-#{$point} {
+  .wpo-initial-order#{$point} {
     order: initial;
   }
 }
 
 @mixin wpo_float_css($point) {
   .wpo-float {
-    &-#{$point}-right {
+    &#{$point}-right {
       float: right;
     }
 
-    &-#{$point}-left {
+    &#{$point}-left {
       float: left;
     }
 
-    &-#{$point}-none {
+    &#{$point}-none {
       float: none;
     }
   }
@@ -168,24 +170,12 @@
 
 @mixin wpo_visibility_css($point) {
   .wpo {
-    &-#{$point}-visible {
+    &#{$point}-visible {
       visibility: visible;
     }
 
-    &-#{$point}-invisible {
+    &#{$point}-invisible {
       visibility: hidden;
-    }
-  }
-}
-
-@mixin wpo_respond_to($break_points...) {
-  @each $breakpoint in $break_points {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media #{inspect(map-get($breakpoints, $breakpoint))} {
-        @content;
-      }
-    } @else {
-      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`.Available breakpoints are: #{map-keys($breakpoints)}.";
     }
   }
 }
@@ -193,5 +183,64 @@
 @mixin wpo_hidden($type) {
   .wpo-hidden-#{$type} {
     display: none;
+  }
+}
+
+@mixin wpo_spacing_counts_internal($type) {
+  &-0 {
+    #{$type}: 0;
+  }
+
+  &-1 {
+    #{$type}: $half-gutter-width;
+  }
+
+  &-2 {
+    #{$type}: $half-gutter-width * 2;
+  }
+
+  &-3 {
+    #{$type}: $half-gutter-width * 3;
+  }
+
+  &-4 {
+    #{$type}: $half-gutter-width * 4;
+  }
+
+  &-5 {
+    #{$type}: $half-gutter-width * 5;
+  }
+}
+
+@mixin wpo_spacing_internal($type) {
+  & {
+    @include wpo_spacing_counts_internal('#{$type}')
+  }
+  &-t, &-y {
+    @include wpo_spacing_counts_internal('#{$type}-top')
+  }
+
+  &-b, &-y {
+    @include wpo_spacing_counts_internal('#{$type}-bottom')
+  }
+
+  &-l, &-x {
+    @include wpo_spacing_counts_internal('#{$type}-left')
+  }
+
+  &-r, &-x {
+    @include wpo_spacing_counts_internal('#{$type}-right')
+  }
+}
+
+@mixin wpo_padding($type) {
+  .wpo-p#{$type} {
+    @include wpo_spacing_internal('padding')
+  }
+}
+
+@mixin wpo_margin($type) {
+  .wpo-m#{$type} {
+    @include wpo_spacing_internal('margin')
   }
 }

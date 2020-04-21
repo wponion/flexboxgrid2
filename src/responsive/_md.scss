@@ -1,16 +1,14 @@
-@include wpo_respond_to('md-viewport') {
+@include wpo_respond_to_md() {
   .wpo-col-md {
     @include wpo_column_css();
     @include wpo_offset_css();
   }
 
-  @include wpo_alignment_css('md');
-
-  @include wpo_float_css('md');
-
-  @include wpo_visibility_css('md');
+  @include wpo_alignment_css('-md');
+  @include wpo_float_css('-md');
+  @include wpo_visibility_css('-md');
 }
 
-@include wpo_respond_to('md-only') {
+@include wpo_respond_to_md_only() {
   @include wpo_hidden('md');
 }

@@ -1,15 +1,3 @@
-[class*="wpo-col-"] {
-  flex-grow:  1;
-  flex-basis: 0;
-  max-width:  100%;
-}
-
-[class*="wpo-col-xl-"], [class*="wpo-col-lg-"], [class*="wpo-col-md-"] {
-  flex:          0 0 auto;
-  padding-right: $half-gutter-width;
-  padding-left:  $half-gutter-width;
-}
-
 @import "responsive/xs";
 @import "responsive/sm";
 @import "responsive/md";

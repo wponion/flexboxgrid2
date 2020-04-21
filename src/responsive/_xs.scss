@@ -3,12 +3,6 @@
   @include wpo_offset_css();
 }
 
-@include wpo_alignment_css('xs');
-
-@include wpo_float_css('xs');
-
-@include wpo_visibility_css('xs');
-
-@include wpo_respond_to('xs-viewport') {
+@include wpo_respond_to_xs() {
   @include wpo_hidden('xs');
 }

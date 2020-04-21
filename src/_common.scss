@@ -4,10 +4,11 @@
 
 [class*="wpo-col-"] {
   flex:          0 0 auto;
-  flex-basis:    100%;
   padding-right: $half-gutter-width;
   padding-left:  $half-gutter-width;
   max-width:     100%;
+  flex-grow:     1;
+  flex-basis:    0;
 
   &.wpo-reverse {
     flex-direction: column-reverse;

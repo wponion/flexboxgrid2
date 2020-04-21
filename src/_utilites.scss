@@ -8,26 +8,8 @@
       margin: 0;
     }
   }
-
-  &-visible {
-    visibility: visible;
-  }
-
-  &-invisible {
-    visibility: hidden;
-  }
-
-  &-float {
-    &-right {
-      float: right;
-    }
-
-    &-left {
-      float: left;
-    }
-
-    &-right {
-      float: none;
-    }
-  }
 }
+
+@include wpo_alignment_css('-xs');
+@include wpo_visibility_css('');
+@include wpo_float_css('');

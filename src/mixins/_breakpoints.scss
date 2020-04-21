@@ -1,0 +1,71 @@
+@mixin wpo_respond_to($break_points...) {
+  @each $breakpoint in $break_points {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media #{inspect(map-get($breakpoints, $breakpoint))} {
+        @content;
+      }
+    } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`.Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+  }
+}
+
+@mixin wpo_respond_to_xs() {
+  @include wpo_respond_to('xs-viewport') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_xs_only() {
+  @include wpo_respond_to('xs-only') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_sm() {
+  @include wpo_respond_to('sm-viewport') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_sm_only() {
+  @include wpo_respond_to('sm-only') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_md() {
+  @include wpo_respond_to('md-viewport') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_md_only() {
+  @include wpo_respond_to('md-only') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_lg() {
+  @include wpo_respond_to('lg-viewport') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_lg_only() {
+  @include wpo_respond_to('lg-only') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_xl() {
+  @include wpo_respond_to('xl-viewport') {
+    @content
+  }
+}
+
+@mixin wpo_respond_to_xl_only() {
+  @include wpo_respond_to('xl-only') {
+    @content
+  }
+}

@@ -1,7 +1,7 @@
 $gutter-width:        16px !default;
 $outer-margin:        32px !default;
-$gutter-compensation: calc((#{$gutter-width} * 0.5) * -1) !default;
-$half-gutter-width:   calc((#{$gutter-width} * 0.5)) !default;
+$gutter-compensation: ($gutter-width * 0.5) * -1 !default;
+$half-gutter-width:   $gutter-width * 0.5 !default;
 $xs-min:              0rem !default;
 $sm-min:              576px !default;
 $md-min:              768px !default;

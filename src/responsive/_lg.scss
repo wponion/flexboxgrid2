@@ -4,11 +4,9 @@
     @include wpo_offset_css();
   }
 
-  @include wpo_alignment_css('lg');
-
-  @include wpo_float_css('lg');
-
-  @include wpo_visibility_css('lg');
+  @include wpo_alignment_css('-lg');
+  @include wpo_float_css('-lg');
+  @include wpo_visibility_css('-lg');
 }
 
 @include wpo_respond_to('lg-only') {
