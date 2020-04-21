@@ -1,6 +1,6 @@
 {
   "name": "@wponion/flexboxgrid2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Grid based off of CSS3 flexbox specification",
   "keywords": [
     "browser",
